@@ -1,0 +1,14 @@
+build/
+*.obj
+*.exp
+*.lib
+*.pdb
+*.log
+
+# Do not commit game/client assets or third-party runtime DLLs.
+d3dx9_27_real.dll
+*.rho
+*.rho5
+*.pk
+Data/
+KartRider.exe
