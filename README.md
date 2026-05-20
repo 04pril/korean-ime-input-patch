@@ -1,6 +1,6 @@
-# KartRider Korean IME Input Patch
+#  Korean IME Input Patch
 
-KartRider/PopKart client-side Korean IME input patch.
+client-side Korean IME input patch.
 
 This repository preserves the minimal DLL patch that makes completed Korean IME composition reach the client as `WM_CHAR`.
 
@@ -8,12 +8,12 @@ This repository preserves the minimal DLL patch that makes completed Korean IME 
 
 - Korean input that was previously blocked can now enter the client.
 - Entered Hangul can be copied back out as real Unicode text.
-- The patch is packaged as a `d3dx9_27.dll` proxy loaded next to `KartRider.exe`.
+- The patch is packaged as a `d3dx9_27.dll` proxy loaded next to `kr.exe`.
 
 ## What This Does Not Fix
 
 - Korean glyph rendering / tofu boxes.
-- Font, RHO, BML, or translator bridge changes.
+- Font, or translator bridge changes.
 - Anti-cheat bypassing.
 
 ## Files
@@ -23,14 +23,14 @@ This repository preserves the minimal DLL patch that makes completed Korean IME 
 - `src/d3dx9_27.def`: export definition file.
 - `scripts/build.ps1`: rebuilds the x86 DLL with Visual Studio Build Tools.
 - `release/d3dx9_27.dll`: prebuilt input-only proxy DLL.
-- `release/KartRider_KoreanInputOnly_DLL.zip`: deployable package without third-party binaries.
+- `release/_KoreanInputOnly_DLL.zip`: deployable package without third-party binaries.
 - `docs/session-summary.md`: notes from the investigation.
 
 ## Install
 
 1. In the game folder, keep the original D3DX DLL as `d3dx9_27_real.dll`.
 2. Copy `release/d3dx9_27.dll` into the game folder as `d3dx9_27.dll`.
-3. Start `KartRider.exe`.
+3. Start `.exe`.
 
 The repo intentionally does not include the original Microsoft/game-provided `d3dx9_27_real.dll`.
 
